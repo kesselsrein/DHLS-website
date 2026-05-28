@@ -15,12 +15,7 @@ jobs:
           node-version: '18'
       - run: npm install
       - run: npm run build
-      - name: Deploy to GitHub Pages
-        run: |
-          cd dist
-          git init
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add -A
-          git commit -m "Deploy to GitHub Pages"
-          git push -f https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/kesselsrein/DHLS-website.git HEAD:gh-pages
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
