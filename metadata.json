@@ -1,0 +1,6 @@
+{
+  "name": "Zelfredzaamheid Dashboard",
+  "description": "Interactief scriptieverslag en zelfredzaamheidanalyse-dashboard voor Stichting De Harde Leerschool, door Rein Kessels (HAN 2026).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
